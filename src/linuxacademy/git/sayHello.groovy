@@ -1,13 +1,17 @@
 package linuxacademy.git;
 
-class SayHello {
+class SayHello implements Serializable {
 
-	def say_something (){
-		echo "saying stuff......"
-	}
+String branch
+  def stages
 
-	def call() {
-   		echo "hello from class file."
-	}
+  SayHello(stages) {
+    this.branch = stages.env.branch
+    this.stages = stages
+  }
 
+  def checkout() {
+    stages.echo 'checking out code from scm..'
+    //checkout scm here, ie. stages.checkout...
+  }
 }
