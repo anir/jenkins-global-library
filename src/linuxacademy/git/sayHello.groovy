@@ -1,5 +1,13 @@
 package linuxacademy.git;
 
-def call() {
-   echo "hello from class file."
+class SayHello {
+
+	def say_something (){
+		echo "saying stuff......"
+	}
+
+	def call() {
+   		echo "hello from class file."
+	}
+
 }
