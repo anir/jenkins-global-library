@@ -3,8 +3,8 @@ package org.foo
 
     def downloadFile(filepath){
         println("${filepath}/newfile.txt")
-        File file = new File("${filepath}/newfile.txt")
-        //file.createNewFile()
+        boolean success  = new File("${filepath}/newfile.txt").createNewFile()
+        println("status : " + ${success})
     }
 
 
