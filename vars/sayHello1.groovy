@@ -15,6 +15,8 @@ def call(body) {
  def z = new org.foo.TestChekout()
  z.checkOutFrom("myrepo")
  z.downloadFile()
+ sh 'ls -la'
+ sh 'pwd'
  echo "Hello World from " + "${config.name}"
 
 
