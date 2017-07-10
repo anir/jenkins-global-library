@@ -1,8 +1,8 @@
 import jenkins.model.Jenkins
 import java.io.File
 import groovy.io.FileType
-import src.org.foo.*
-import src.org.foo.TestCheckout
+import org.foo.*
+import org.foo.TestCheckout
 
 def call(body) {
 // evaluate the body block, and collect configuration into the object
@@ -10,6 +10,7 @@ def call(body) {
  body.resolveStrategy = Closure.DELEGATE_FIRST
  body.delegate = config
  body()
+ println ("config object :" + "${config}")
  //def z = new TestCheckout()
  //z.checkOutFrom("myrepo")
  echo "Hello World from " + "${config.name}"
