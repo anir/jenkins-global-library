@@ -1,8 +1,8 @@
 import jenkins.model.Jenkins
 import java.io.File
 import groovy.io.FileType
-import org.foo.*
-import org.foo.TestCheckout
+import src.org.foo.*
+import src.org.foo.TestCheckout
 
 def call(body) {
 // evaluate the body block, and collect configuration into the object
