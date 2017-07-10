@@ -2,6 +2,7 @@
 package org.foo
 
     def downloadFile(filepath){
+        println("${filepath}/newfile.txt")
         File file = new File("${filepath}/newfile.txt");
         if(file.createNewFile()){
           println("creating new file.....")
