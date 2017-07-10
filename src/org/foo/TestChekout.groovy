@@ -4,6 +4,7 @@ import jenkins.model.Jenkins
 import hudson.model.User
 import hudson.security.Permission
 import hudson.EnvVars
+import hudson.FilePath
 
     def downloadFile(filepath){
     if(build.workspace.isRemote())
