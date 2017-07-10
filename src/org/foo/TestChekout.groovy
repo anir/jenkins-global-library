@@ -10,16 +10,17 @@ import hudson.FilePath
     println("downloading file----------------")
     try {
 
-    File file = new File("${filepath}" + "/newfile.txt");
+    File file = new File("${filepath}" + "/newfile.txt")
 
     if (file.createNewFile()){
-      println("File is created!");
+      println("File is created!")
     }else{
-      println("File already exists.");
+      println("File already exists.")
     }
 
   } catch (IOException e) {
-    e.printStackTrace();
+    e.printStackTrace()
+    println(e)
 }
     }
 
