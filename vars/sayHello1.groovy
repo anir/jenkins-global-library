@@ -1,8 +1,8 @@
 import jenkins.model.Jenkins
 import java.io.File
 import groovy.io.FileType
-import org.foo.*
-import org.foo.TestCheckout
+//import org.foo.*
+//import org.foo.TestCheckout
 
 def call(body) {
 // evaluate the body block, and collect configuration into the object
@@ -24,11 +24,11 @@ println()
 println("Total nodes: [" + Jenkins.instance.computers.size() + "]")
 println("Total executors: [" + Jenkins.instance.computers.inject(0, {a, c -> a + c.numExecutors}) + "]")
 
-
+/*
 File file = new File("newfile.txt");
 
 if(file.createNewFile()){
   println("creating new file.....")
 }
-
+*/
 }
