@@ -12,7 +12,7 @@ def call(body) {
  body.delegate = config
  body()
  println ("config object :" + "${config}")
- def z = new org.foo.TestCheckout()
+ def z = new org.foo.TestChekout()
  z.checkOutFrom("myrepo")
  echo "Hello World from " + "${config.name}"
 
