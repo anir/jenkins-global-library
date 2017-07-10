@@ -1,6 +1,6 @@
-package org.foo;
+package org.foo
 
-class TestCheckout{
+class TestCheckout implements Serializable {
     def checkOutFrom(repo) {
       git url: "git@github.com:anir/${repo}"
     }
