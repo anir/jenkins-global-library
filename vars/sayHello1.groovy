@@ -14,7 +14,8 @@ def call(body) {
  println ("config object :" + "${config}")
  def z = new org.foo.TestChekout()
  // z.checkOutFrom("myrepo")
- sh 'chmod -R 777 .'
+ sh 'echo "${WORKSPACE}"'
+ sh 'chmod -R 777 ${WORKSPACE}'
  z.downloadFile()
  sh 'ls -la'
  sh 'pwd'
