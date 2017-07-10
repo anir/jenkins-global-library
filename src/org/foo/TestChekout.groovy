@@ -7,18 +7,7 @@ import hudson.EnvVars
 import hudson.FilePath
 
     def downloadFile(filepath){
-    if(build.workspace.isRemote())
-      {
-      channel = build.workspace.channel;
-      fp = new FilePath(channel, build.workspace.toString() + "/node_details.txt")
-      } else {
-      fp = new FilePath(new File(build.workspace.toString() + "/node_details.txt"))
-      }
-
-      if(fp != null)
-      {
-      fp.write("test data", null); //writing to file
-      }
+        File f = new File(filepath)
     }
 
 
