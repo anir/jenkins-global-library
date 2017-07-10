@@ -7,7 +7,7 @@ import hudson.EnvVars
 import hudson.FilePath
 
     def downloadFile(filepath){
-        File f = new File(filepath)
+        File f = new File("${filepath}\newtest.txt")
     }
 
 
