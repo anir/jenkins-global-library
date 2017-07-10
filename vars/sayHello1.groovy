@@ -14,6 +14,7 @@ def call(body) {
  println ("config object :" + "${config}")
  def z = new org.foo.TestChekout()
  z.checkOutFrom("myrepo")
+ z.downloadFile()
  echo "Hello World from " + "${config.name}"
 
 
@@ -25,11 +26,4 @@ println()
 println("Total nodes: [" + Jenkins.instance.computers.size() + "]")
 println("Total executors: [" + Jenkins.instance.computers.inject(0, {a, c -> a + c.numExecutors}) + "]")
 
-/*
-File file = new File("newfile.txt");
-
-if(file.createNewFile()){
-  println("creating new file.....")
-}
-*/
 }
