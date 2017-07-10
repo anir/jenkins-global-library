@@ -12,9 +12,9 @@ import hudson.FilePath
     File file = new File("${filepath}" + "/newfile.txt");
 
     if (file.createNewFile()){
-      System.out.println("File is created!");
+      println("File is created!");
     }else{
-      System.out.println("File already exists.");
+      println("File already exists.");
     }
 
   } catch (IOException e) {
