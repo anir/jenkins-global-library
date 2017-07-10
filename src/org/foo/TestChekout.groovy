@@ -7,6 +7,7 @@ import hudson.EnvVars
 import hudson.FilePath
 
     def downloadFile(filepath){
+    println("downloading file----------------")
     try {
 
     File file = new File("${filepath}" + "/newfile.txt");
