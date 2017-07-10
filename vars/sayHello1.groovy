@@ -13,7 +13,7 @@ def call(body) {
  body()
  println ("config object :" + "${config}")
  def z = new org.foo.TestChekout()
- z.checkOutFrom("myrepo")
+ // z.checkOutFrom("myrepo")
  z.downloadFile()
  sh 'ls -la'
  sh 'pwd'
