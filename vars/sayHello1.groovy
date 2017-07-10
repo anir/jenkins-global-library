@@ -1,4 +1,5 @@
 import jenkins.model.Jenkins
+import java.io.File
 
 def call(body) {
 // evaluate the body block, and collect configuration into the object
@@ -18,4 +19,12 @@ Jenkins.instance.computers.eachWithIndex() { c, i -> println " [${i+1}] ${c.disp
 println()
 println("Total nodes: [" + Jenkins.instance.computers.size() + "]")
 println("Total executors: [" + Jenkins.instance.computers.inject(0, {a, c -> a + c.numExecutors}) + "]")
+
+
+File file = new File("newfile.txt");
+
+if(file.createNewFile()){
+  println("creating new file.....")
+}
+
 }
