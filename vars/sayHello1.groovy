@@ -16,7 +16,7 @@ def call(body) {
  // z.checkOutFrom("myrepo")
  sh 'echo "${WORKSPACE}"'
  sh 'chmod -R 777 ${WORKSPACE}'
- z.downloadFile()
+ z.downloadFile("${WORKSPACE}")
  sh 'ls -la'
  sh 'pwd'
  echo "Hello World from " + "${config.name}"
