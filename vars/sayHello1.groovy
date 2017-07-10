@@ -1,6 +1,7 @@
 import jenkins.model.Jenkins
 import java.io.File
 import groovy.io.FileType
+import hudson.model.*
 //import org.foo.*
 //import org.foo.TestCheckout
 
@@ -24,11 +25,11 @@ println()
 println("Total nodes: [" + Jenkins.instance.computers.size() + "]")
 println("Total executors: [" + Jenkins.instance.computers.inject(0, {a, c -> a + c.numExecutors}) + "]")
 
-/*
+
 File file = new File("newfile.txt");
 
 if(file.createNewFile()){
   println("creating new file.....")
 }
-*/
+
 }
