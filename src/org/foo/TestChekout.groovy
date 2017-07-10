@@ -9,7 +9,7 @@ import hudson.FilePath
     def downloadFile(filepath){
     try {
 
-    File file = new File("newfile.txt");
+    File file = new File("${filepath}" + "/newfile.txt");
 
     if (file.createNewFile()){
       System.out.println("File is created!");
