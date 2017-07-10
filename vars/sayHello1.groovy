@@ -1,5 +1,7 @@
 import jenkins.model.Jenkins
 import java.io.File
+import org.foo.*
+import org.foo.TestCheckout.*
 
 def call(body) {
 // evaluate the body block, and collect configuration into the object
