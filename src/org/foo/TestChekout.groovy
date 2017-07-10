@@ -6,30 +6,18 @@ import hudson.security.Permission
 import hudson.EnvVars
 
     def downloadFile(filepath){
-        EnvVars envVars = build.getEnvironment(listener);
-        filename = envVars.get('WORKSPACE') + "\\node_details.txt";
+    if(build.workspace.isRemote())
+      {
+      channel = build.workspace.channel;
+      fp = new FilePath(channel, build.workspace.toString() + "/node_details.txt")
+      } else {
+      fp = new FilePath(new File(build.workspace.toString() + "/node_details.txt"))
+      }
 
-        //filename = "${manager.build.workspace.remote}" + "\\node_details.txt"
-
-        targetFile = new File(filename);
-
-        println "attempting to create file: $targetFile"
-
-
-
-        if (targetFile.createNewFile()) {
-
-            println "Successfully created file $targetFile"
-
-        } else {
-
-            println "Failed to create file $targetFile"
-
-        }
-
-        print "Deleting ${targetFile.getAbsolutePath()} : "
-
-        println targetFile.delete()
+      if(fp != null)
+      {
+      fp.write("test data", null); //writing to file
+      }
     }
 
 
